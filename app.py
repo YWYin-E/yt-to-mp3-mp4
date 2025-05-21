@@ -415,5 +415,5 @@ def open_browser():
     webbrowser.open("http://localhost:5000")
 
 if __name__ == '__main__':
-    threading.Thread(target=open_browser).start()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
+
