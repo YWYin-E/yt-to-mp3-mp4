@@ -36,6 +36,7 @@ def download_video(url, format_choice, job_id):
     ydl_opts = {
         'outtmpl': os.path.join(DOWNLOAD_DIR, '%(title)s.%(ext)s'),
         'progress_hooks': [progress_hook],
+        'cookiefile': 'cookies.txt',
         'quiet': True,
         'ignoreerrors': True,
         'noplaylist': False
